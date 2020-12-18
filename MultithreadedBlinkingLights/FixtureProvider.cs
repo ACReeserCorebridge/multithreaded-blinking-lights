@@ -44,6 +44,10 @@ namespace MultithreadedBlinkingLights
                     result.Add(
                         _serviceProvider.GetService(typeof(LoggingLightFixture)) as LoggingLightFixture
                         );
+                else if (i % 10 == 2)
+                    result.Add(
+                        _serviceProvider.GetService(typeof(UniversalThirdPartyLightFixture)) as UniversalThirdPartyLightFixture
+                        );
                 else
                     result.Add(
                         _serviceProvider.GetService(typeof(IntermittentLightFixture)) as IntermittentLightFixture
