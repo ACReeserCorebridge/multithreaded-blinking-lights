@@ -19,7 +19,7 @@ namespace MultithreadedBlinkingLights
             return new CurrentAndWavelength()
             {
                 NormalizedCurrent = current,
-                Wavelength = ""
+                Wavelength = "Yellow"
             };
         }
 

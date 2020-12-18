@@ -14,6 +14,7 @@ namespace MultithreadedBlinkingLights
                 .AddSingleton<IFixtureProvider, FixtureProvider>()
                 .AddTransient<ConstantlyEmittingLightFixture, ConstantlyEmittingLightFixture>()
                 .AddTransient<IntermittentLightFixture, IntermittentLightFixture>()
+                .AddTransient<LoggingLightFixture, LoggingLightFixture>()
                 .AddTransient<IPhotonExciter, PhotonExciter>()
                 .BuildServiceProvider();
 
