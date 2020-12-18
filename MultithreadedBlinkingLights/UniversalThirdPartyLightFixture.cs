@@ -18,6 +18,7 @@ namespace MultithreadedBlinkingLights
 
         public override async Task<CurrentAndWavelength> GetCurrentAndWavelength(int fixtureIndex)
         {
+            // bug report! users on intranets see Exceptions here
             IProfessionalCurrentAndWavelength result = await _universal.GetUniversalCurrentAsync();
             return new CurrentAndWavelength()
             {
