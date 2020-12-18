@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29709.97
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AlternatingIllumination", "AlternatingIllumination.csproj", "{D4B52BDC-C35A-402F-9056-462EB3D561BB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProfessionalTestSuite", "..\ProfessionalTestSuite\ProfessionalTestSuite.csproj", "{EF0B2123-A469-4C24-A6E7-2165AB5AFBC9}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D4B52BDC-C35A-402F-9056-462EB3D561BB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D4B52BDC-C35A-402F-9056-462EB3D561BB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D4B52BDC-C35A-402F-9056-462EB3D561BB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D4B52BDC-C35A-402F-9056-462EB3D561BB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EF0B2123-A469-4C24-A6E7-2165AB5AFBC9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EF0B2123-A469-4C24-A6E7-2165AB5AFBC9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EF0B2123-A469-4C24-A6E7-2165AB5AFBC9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EF0B2123-A469-4C24-A6E7-2165AB5AFBC9}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {5E7BD3A9-1F43-488C-A98C-83F65FBD794D}
+	EndGlobalSection
+EndGlobal
