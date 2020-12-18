@@ -40,7 +40,7 @@ namespace MultithreadedBlinkingLights
                     result.Add(
                         _serviceProvider.GetService(typeof(ConstantlyEmittingLightFixture)) as ConstantlyEmittingLightFixture
                         );
-                else if (i == 11)
+                else if (i % 10 == 0)
                     result.Add(
                         _serviceProvider.GetService(typeof(LoggingLightFixture)) as LoggingLightFixture
                         );

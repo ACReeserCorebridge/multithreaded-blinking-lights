@@ -13,7 +13,7 @@ namespace MultithreadedBlinkingLights
 
         private string[] _amps = new string[CONSTANTS.NUM_AVAIL_DIODES_TEST];
         private ConsoleColor[] _wavelength = new ConsoleColor[CONSTANTS.NUM_AVAIL_DIODES_TEST];
-        private bool[] _burnedOutBulbs = new bool[CONSTANTS.NUM_AVAIL_DIODES_TEST] { false, false, false, false, false, false, false, false, false, false, false, false };
+        private bool[] _burnedOutBulbs = new bool[CONSTANTS.NUM_AVAIL_DIODES_TEST];
 
         public void IncreaseAmperage(int i, string wavelength)
         {
