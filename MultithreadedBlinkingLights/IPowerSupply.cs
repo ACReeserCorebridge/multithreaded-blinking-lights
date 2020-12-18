@@ -8,5 +8,6 @@ namespace MultithreadedBlinkingLights
     {
         void TurnOn();
         void TurnOff();
+        bool IsOn { get; }
     }
 }

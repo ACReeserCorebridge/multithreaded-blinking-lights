@@ -11,6 +11,7 @@ namespace MultithreadedBlinkingLights
 
         private bool powerSwitchIsOn = false;
         private Task current;
+        public bool IsOn { get { return powerSwitchIsOn;  } }
 
         public PowerSupply(IPhotonExciter exciter)
         {
