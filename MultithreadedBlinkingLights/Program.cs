@@ -1,4 +1,6 @@
-﻿using Microsoft.Extensions.DependencyInjection;
+﻿using AlternatingIllumination.Implementation;
+using AlternatingIllumination.Interfaces;
+using Microsoft.Extensions.DependencyInjection;
 using System;
 using System.Threading;
 
@@ -16,6 +18,7 @@ namespace MultithreadedBlinkingLights
                 .AddTransient<IntermittentLightFixture, IntermittentLightFixture>()
                 .AddTransient<LoggingLightFixture, LoggingLightFixture>()
                 .AddTransient<UniversalThirdPartyLightFixture, UniversalThirdPartyLightFixture>()
+                .AddTransient<IUniversalFlashingCurrentProvider, UniversalFlashingCurrentProvider>()
                 .AddTransient<IPhotonExciter, PhotonExciter>()
                 .BuildServiceProvider();
 
