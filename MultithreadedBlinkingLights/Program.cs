@@ -9,6 +9,7 @@ namespace MultithreadedBlinkingLights
         static void Main(string[] args)
         {
             var serviceProvider = new ServiceCollection()
+                .AddSingleton<ILightHardwareSource, LightHardwareSource>()
                 .BuildServiceProvider();
 
             Console.WriteLine("MULTITHREADED BLINKING LIGHTS V 1.0");
