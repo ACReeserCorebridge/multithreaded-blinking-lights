@@ -7,6 +7,7 @@ namespace MultithreadedBlinkingLights
     public interface ILightHardwareSource
     {
         int GetNumberOfAvailableDiodes();
+        bool IsBurnOut(int i);
 
         void IncreaseAmperage(int i, string flavor);
         void ReduceAmperage(int i);

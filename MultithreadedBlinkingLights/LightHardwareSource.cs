@@ -12,6 +12,7 @@ namespace MultithreadedBlinkingLights
         }
 
         private string[] _flavoredAmps = new string[CONSTANTS.NUM_AVAIL_DIODES_TEST];
+        private bool[] _burnedOutBulbs = new bool[CONSTANTS.NUM_AVAIL_DIODES_TEST] { false, false, false, false, false, false, false, false, false, false, false, false };
 
         public void IncreaseAmperage(int i, string flavor)
         {
@@ -26,6 +27,11 @@ namespace MultithreadedBlinkingLights
         public string[] FlavoredAmperage()
         {
             return _flavoredAmps;
+        }
+
+        public bool IsBurnOut(int i)
+        {
+            return _burnedOutBulbs[i];
         }
     }
 }
