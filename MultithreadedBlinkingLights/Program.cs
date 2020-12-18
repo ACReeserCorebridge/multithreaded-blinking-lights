@@ -10,12 +10,14 @@ namespace MultithreadedBlinkingLights
         {
             var serviceProvider = new ServiceCollection()
                 .AddSingleton<ILightHardwareSource, LightHardwareSource>()
+                .AddSingleton<IPowerSupply, PowerSupply>()
                 .AddTransient<IPhotonExciter, PhotonExciter>()
                 .BuildServiceProvider();
 
             Console.WriteLine("MULTITHREADED BLINKING LIGHTS V 1.0");
             Console.WriteLine("(c) ALEX REESER COREBRIDGE CORP");
             Console.WriteLine("------------");
+            serviceProvider.GetService<IPowerSupply>().TurnOn();
             string input = "";
             while(input != "exit")
             {
