@@ -37,7 +37,7 @@ namespace MultithreadedBlinkingLights
             for (int i = 0; i < numOfDiodes; i++)
             {
                 result.Add(
-                    _serviceProvider.GetService(typeof(ILightEmittingFixture)) as ILightEmittingFixture
+                    _serviceProvider.GetService(typeof(ConstantlyEmittingLightFixture)) as ConstantlyEmittingLightFixture
                     );
             }
             return result;

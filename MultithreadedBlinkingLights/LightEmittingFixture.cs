@@ -8,9 +8,9 @@ namespace MultithreadedBlinkingLights
     /// <summary>
     /// convenience abstraction for things that emit light
     /// </summary>
-    public class LightEmittingFixture: ILightEmittingFixture
+    public abstract class LightEmittingFixture: ILightEmittingFixture
     {
-        readonly ILightHardwareSource _hardware;
+        protected readonly ILightHardwareSource _hardware;
 
         public LightEmittingFixture(
             ILightHardwareSource hardware)
@@ -18,15 +18,6 @@ namespace MultithreadedBlinkingLights
             _hardware = hardware;
         }
 
-        public Task<CurrentAndWavelength> GetCurrentAndWavelength(int fixtureIndex)
-        {
-            return Task.FromResult(
-                new CurrentAndWavelength()
-                {
-                    NormalizedCurrent = 1,
-                    Wavelength = ""
-                }
-            );
-        }
+        public abstract Task<CurrentAndWavelength> GetCurrentAndWavelength(int fixtureIndex);
     }
 }
