@@ -18,9 +18,17 @@ namespace MultithreadedBlinkingLights
         {
             ElectromagneticUtils.ResetEMOutput();
 
-            Console.WriteLine(
-                String.Join('|', _hardware.FlavoredAmperage())
-            );
+            string[] amps = _hardware.CurrentAmperage();
+            ConsoleColor[] wavelength = _hardware.CurrentWavelengths();
+            for (int i = 0; i < amps.Length; i++)
+            {
+                if (i > 0)
+                    Console.Write('|');
+                Console.ForegroundColor = wavelength[i];
+                Console.Write(amps[i]);
+                Console.ForegroundColor = ConsoleColor.White;
+            }
+            Console.Write("\r\n");
 
             await Task.Delay(1);
         }

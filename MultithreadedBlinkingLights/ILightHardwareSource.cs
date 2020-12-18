@@ -9,9 +9,10 @@ namespace MultithreadedBlinkingLights
         int GetNumberOfAvailableDiodes();
         bool IsBurnOut(int i);
 
-        void IncreaseAmperage(int i, string flavor);
+        void IncreaseAmperage(int i, string wavelength);
         void ReduceAmperage(int i);
 
-        string[] FlavoredAmperage();
+        string[] CurrentAmperage();
+        ConsoleColor[] CurrentWavelengths();
     }
 }

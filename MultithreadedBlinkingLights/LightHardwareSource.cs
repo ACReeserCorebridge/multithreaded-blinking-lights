@@ -11,22 +11,36 @@ namespace MultithreadedBlinkingLights
             return CONSTANTS.NUM_AVAIL_DIODES_TEST;
         }
 
-        private string[] _flavoredAmps = new string[CONSTANTS.NUM_AVAIL_DIODES_TEST];
+        private string[] _amps = new string[CONSTANTS.NUM_AVAIL_DIODES_TEST];
+        private ConsoleColor[] _wavelength = new ConsoleColor[CONSTANTS.NUM_AVAIL_DIODES_TEST];
         private bool[] _burnedOutBulbs = new bool[CONSTANTS.NUM_AVAIL_DIODES_TEST] { false, false, false, false, false, false, false, false, false, false, false, false };
 
-        public void IncreaseAmperage(int i, string flavor)
+        public void IncreaseAmperage(int i, string wavelength)
         {
-            _flavoredAmps[i] = "█";
+            _amps[i] = "█";
+            if (Enum.TryParse<ConsoleColor>(wavelength, true, out ConsoleColor color))
+            {
+                _wavelength[i] = color;
+            }
+            else
+            {
+                _wavelength[i] = ConsoleColor.Red;
+            }
         }
 
         public void ReduceAmperage(int i)
         {
-            _flavoredAmps[i] = ".";
+            _amps[i] = ".";
         }
 
-        public string[] FlavoredAmperage()
+        public string[] CurrentAmperage()
         {
-            return _flavoredAmps;
+            return _amps;
+        }
+
+        public ConsoleColor[] CurrentWavelengths()
+        {
+            return _wavelength;
         }
 
         public bool IsBurnOut(int i)
