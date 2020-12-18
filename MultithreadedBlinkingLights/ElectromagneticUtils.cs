@@ -12,4 +12,10 @@ namespace MultithreadedBlinkingLights
             Console.CursorLeft = 0;
         }
     }
+
+    public struct CurrentAndWavelength
+    {
+        public float NormalizedCurrent;
+        public string Wavelength;
+    }
 }
